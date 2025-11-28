@@ -65,7 +65,7 @@ function parseLocalLyrics(lyrics: string): ParsedLyrics {
  */
 function parseTime(time: string): number {
   const [minutes, seconds] = time.split(":").map(Number);
-  return minutes * 60 + seconds;
+  return new Number((minutes * 60 + seconds).toFixed(2)).valueOf();
 }
 
 export { parseLocalLyrics, parseTime };
